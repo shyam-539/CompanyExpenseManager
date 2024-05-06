@@ -49,12 +49,12 @@
                                 <p><strong>Net Amount:</strong> {{ $expense->net_amount }}</p>
 
                                 <!-- Display expense images -->
-                                @if ($expense->images->count() > 0)
+                                @if ($expense->files->count() > 0)
                                     <p><strong>Invoices:</strong></p>
                                     <div class="row">
-                                        @foreach ($expense->images as $image)
+                                        @foreach ($expense->files as $file)
                                             <div class="col-md-3">
-                                                <img src="{{ asset('storage/' . $image->image) }}" class="img-thumbnail"
+                                                <img src="{{ asset('storage/' . $file->file) }}" class="img-thumbnail"
                                                     alt="Expense Image">
                                             </div>
                                         @endforeach
